@@ -1,0 +1,25 @@
+@startuml Atividade3
+|#pink|Cliente|
+start
+:Solicitar pedido;
+|#lightgray|Venda|
+#lightgray:Processar pedido;
+|Estoque|
+:Reunir materiais;
+:Enviar pedido;
+|Venda|
+fork
+:Faturar cliente;
+|Cliente|
+fork again
+:Receber pedido;
+|Venda|
+|Cliente|
+endfork
+|Cliente|
+:Pagar fatura;
+|Venda|
+:Fechar pedido;
+stop
+@enduml
+
